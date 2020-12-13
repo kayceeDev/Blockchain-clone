@@ -33,7 +33,7 @@ const Login = () => {
           </div>
           <label htmlFor="password">Password</label>
           <input type="password" name="password" id="password" />
-          <Link to='/home'><button type="submit">Log in</button></Link>
+          <Link to='/home'><button type="submit">Click here to View Site without ID and Password</button></Link>
         </form>
         <div className="extra">
           <p>
