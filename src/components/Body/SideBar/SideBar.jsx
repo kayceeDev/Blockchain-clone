@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import Login from '../../login/Login'
-
-
-import DashBoard from '../SideBar/Dashboard'
+import Login from "../../login/Login";
+import airdrop from "../../../assets/img/airdrop.png";
+import image6 from "../../../assets/img/image6.png";
+import arrow from "../../../assets/img/arrow-border.png";
+import DashBoard from "../SideBar/Dashboard";
 
 const Index = ({ categories }) => {
   const [amount, setAmount] = useState(0);
+  const [value, setValue] = useState(0)
+  const {component} = categories[value]
   return (
     <main>
       <section className="navigation">
@@ -16,15 +19,16 @@ const Index = ({ categories }) => {
           </div>
 
           <div className="cursor-div">
-            <p>0</p>
+            <img src={arrow} alt="" />
           </div>
         </div>
 
         <div className="others">
           {categories.map((category, index) => {
             return (
-              <button type="button" className={category.sideclass} key={index}>
-                <img src={'../../../assets/img/home.png'} className={category.imgclass} alt="" />
+              <button className={category.sideclass} key={index}
+              onClick={() => setValue(index)}>
+                <img src={category.img} className={category.imgclass} alt="" />
                 {category.category}
               </button>
             );
@@ -32,24 +36,23 @@ const Index = ({ categories }) => {
         </div>
 
         <div className="final">
-          <button className="airdrops">Airdrops</button>
-          <button className="airdrops">Exchange</button>
+          <button className="airdrops">
+            <img src={airdrop} className="img-btc" alt="" />
+            Airdrops
+          </button>
+          <button className="airdrops">
+            <img src={image6} className="img-btc" alt="" />
+            Exchange
+          </button>
         </div>
       </section>
 
-      <section className="dashboard-component">
-      <DashBoard categories={categories}/>
-        <div className="right-side">
-          <div className="top-right-side">
-            <p>
-              Bitcoin (BTC) <span>0</span>
-            </p>
+      
+        {component}
 
-            <p>Current Price</p>
-            <p>$19,268.39</p>
-          </div>
-        </div>
-      </section>
+        {/* <DashBoard categories={categories} /> */}
+        
+      
     </main>
   );
 };

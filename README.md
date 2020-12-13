@@ -1,3 +1,11 @@
+# Blockchain Clone
+- This practice project was solely built on Html, Css And ReactJs.
+- It is still a work in progress so it is not very responsive yet
+
+- All data used in the project are dummy data.
+
+Note: The first page you will see is a login page, you have to click the login button page to view the full site.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

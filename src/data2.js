@@ -7,16 +7,19 @@ import HardwareComponent from './components/Body/MiniNavs/HardwareComponent'
 
 const slider = [
   {
+    id: 0,
     name : 'Total',
     classes: 'sl-tot',
     component: <TotalComponent />
   },
   {
+    id: 1,
     name : 'Wallet',
     classes: 'sl-wal',
     component: <WalletComponent />
   },
   {
+    id: 2,
     name : 'Hardware',
     classes: 'sl-har',
     component: <HardwareComponent />

@@ -13,7 +13,7 @@ const [categories, setCategories] = useState(data)
           <div className="total-others" key={index}>
             <div className="each-total">
               <div>
-                <p className="each-us">{category.category}</p>
+                <p className="each-us"><img src={category.img} className='each-btc' alt=""/>{category.category}</p>
               </div>
               <div className="each-cur">
                 <p>$0.00</p>
